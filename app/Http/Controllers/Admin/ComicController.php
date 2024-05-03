@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Guest;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
