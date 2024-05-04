@@ -15,6 +15,7 @@ class ComicController extends Controller
     {
         // dd(Comic::all());
         return view('comics.index', ['comics' => Comic::all()]);
+        // return view('comics.index', ['comics' => Comic::orderByDesc('title')->get()]);
     }
 
     /**
@@ -32,8 +33,10 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
+        // creo la nuova risorsa con i dati forniti dal form inserito in create
         $comic = Comic::create($data);
 
+        // reindirizzo alla rotta
         return to_route('comics.show', $comic);
     }
 
