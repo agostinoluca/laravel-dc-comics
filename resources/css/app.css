@@ -1,3 +1,9 @@
+img {
+    max-width: 100%;
+}
+
 .dc_jumbo {
     background-image: url(/public/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

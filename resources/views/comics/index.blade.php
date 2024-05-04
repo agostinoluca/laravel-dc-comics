@@ -15,6 +15,7 @@
                     <th scope="col">thumb</th>
                     <th scope="col">description</th>
                     <th scope="col">created at</th>
+                    <th scope="col">view</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,11 @@
                         <td>{{ $comic->thumb }}</td>
                         <td>{{ $comic->description }}</td>
                         <td>{{ $comic->created_at }}</td>
+                        <th class="text-center">
+                            <a href="{{ route('comics.show', $comic) }}">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </th>
                     </tr>
                 @empty
                     <tr class="">
