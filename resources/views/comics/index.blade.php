@@ -4,7 +4,8 @@
 
 
 @section('content')
-    <div class="table-responsive container">
+    @include('partials.admin_nav')
+    <div class="table-responsive container mt-3">
         <table class="table table-primary">
             <thead>
                 <tr>

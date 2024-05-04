@@ -1,10 +1,10 @@
 @extends('layouts.app')
-
 <title>@yield('pagetitle', 'Comics')</title>
 
 
 @section('content')
-    <div class="container">
+    @include('partials.admin_nav')
+    <div class="container mt-3">
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
 
