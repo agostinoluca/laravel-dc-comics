@@ -14,7 +14,8 @@ class ComicController extends Controller
     public function index()
     {
         // dd(Comic::all());
-        return view('comics.index', ['comics' => Comic::all()]);
+        $comics = Comic::all();
+        return view('comics.index', compact('comics'));
         // return view('comics.index', ['comics' => Comic::orderByDesc('title')->get()]);
     }
 

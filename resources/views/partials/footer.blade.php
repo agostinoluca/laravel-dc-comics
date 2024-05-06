@@ -1,4 +1,4 @@
 <footer class="bg-color bg-secondary text-center p-1">
-    <span class="lead text-light">Comics Laravel Site <i class="fa fa-copyright" aria-hidden="true">©Copiright
+    <span class="lead text-light">Comics Laravel Site <i class="fa fa-copyright" aria-hidden="true">Copiright
             2024</i></span>
 </footer>
