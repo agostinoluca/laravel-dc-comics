@@ -24,6 +24,10 @@
                     </div>
                 </div>
             </div>
+            <div class="pt-5 text-center">
+                <a class="bg-dark py-2 px-5 rounded-5 text-decoration-none text-light" href="{{ route('shop') }}">View All
+                    Cards</a>
+            </div>
         </div>
     </div>
 @endsection
