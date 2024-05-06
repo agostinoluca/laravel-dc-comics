@@ -8,7 +8,7 @@
     <div class="table-responsive container mt-3">
         <table class="table table-primary">
             <thead>
-                <tr>
+                <tr class="text-nowrap">
                     <th scope="col">id</th>
                     <th scope="col">title</th>
                     <th scope="col">subtitle</th>
@@ -21,8 +21,8 @@
             <tbody>
 
                 @forelse ($comics as $comic)
-                    <tr class="">
-                        <td scope="row">{{ $comic->id }}</td>
+                    <tr>
+                        <td>{{ $comic->id }}</td>
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->subtitle }}</td>
                         <td>{{ $comic->thumb }}</td>
@@ -35,8 +35,8 @@
                         </th>
                     </tr>
                 @empty
-                    <tr class="">
-                        <td scope="row">No comics yet</td>
+                    <tr>
+                        <td>No comics yet</td>
                     </tr>
                 @endforelse
 

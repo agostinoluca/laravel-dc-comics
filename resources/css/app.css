@@ -7,3 +7,8 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bangers {
+    font-family: "Bangers", system-ui;
+    font-size: 2.5rem;
+}
