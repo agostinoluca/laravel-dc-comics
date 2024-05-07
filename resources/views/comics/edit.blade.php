@@ -40,17 +40,10 @@
             </div>
             {{-- /text-area description --}}
 
-            <div class="d-flex justify-content-center gap-4">
-                <button type="submit" class="btn btn-primary">
-                    Edit Comic
-                </button>
-                {{-- /form submit --}}
-
-                <button class="btn btn-danger">
-                    <a class="text-light text-decoration-none" href="{{ route('comics.index') }}">Retry</a>
-                </button>
-                {{-- /form submit --}}
-            </div>
+            <button type="submit" class="btn btn-primary">
+                Edit Comic
+            </button>
+            {{-- /form submit --}}
         </form>
     </div>
 @endsection
