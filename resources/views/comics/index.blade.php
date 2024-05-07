@@ -16,6 +16,7 @@
                     <th scope="col">description</th>
                     <th scope="col">created at</th>
                     <th scope="col">view</th>
+                    <th scope="col">edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,11 @@
                         <th class="text-center">
                             <a href="{{ route('comics.show', $comic) }}">
                                 <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </th>
+                        <th class="text-center">
+                            <a href="{{ route('comics.edit', $comic) }}">
+                                <i class="fa-solid fa-pen-to-square text-danger"></i>
                             </a>
                         </th>
                     </tr>
