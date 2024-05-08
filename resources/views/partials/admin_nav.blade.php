@@ -1,4 +1,4 @@
-    <ul class="nav justify-content-end">
+    <ul class="nav justify-content-end py-1">
         <li class="nav-item">
             <a class="nav-link {{ Route::currentRouteName() === 'comics.index' ? 'bg-info text-light fw-bold rounded-5' : '' }}"
                 href="{{ route('comics.index') }}">Database</a>

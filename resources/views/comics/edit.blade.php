@@ -5,6 +5,12 @@
 @section('content')
     @include('partials.admin_nav')
     <div class="container mt-3">
+        <div class="mb-3">
+            <a class="text-decoration-none text-dark" href="{{ route('comics.index') }}"><i
+                    class="fa-solid fa-backward text-danger"></i> Go Back</a>
+        </div>
+        {{-- /Go Back (a href) --}}
+
         <form action="{{ route('comics.update', $comic) }}" method="post">
             @csrf
             @method('PUT')
