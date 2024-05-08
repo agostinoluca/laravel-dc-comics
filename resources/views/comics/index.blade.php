@@ -26,7 +26,7 @@
                         <td>{{ $comic->id }}</td>
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->subtitle }}</td>
-                        <td>{{ $comic->thumb }}</td>
+                        <td><img width="80px" src="{{ $comic->thumb }}" alt=""></td>
                         <td>{{ $comic->description }}</td>
                         <td>{{ $comic->created_at }}</td>
                         <th class="text-center">
