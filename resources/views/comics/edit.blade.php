@@ -5,7 +5,7 @@
 @section('content')
     @include('partials.admin_nav')
     <div class="position-relative">
-        <div class="position-absolute px-5 top-0 start-0 opacity-25">
+        <div class="position-absolute px-5 top-0 end-0 opacity-25">
             <img class="rounded-circle" width="400" style="aspect-ratio: 1;" src="{{ $comic->thumb }}" alt="">
         </div>
         <div class="container mt-3">
