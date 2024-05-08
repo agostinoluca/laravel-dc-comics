@@ -14,7 +14,8 @@ class PageController extends Controller
 
     public function shop()
     {
-        return view('shop', ['comics' => Comic::all()]);
+        $comics = Comic::orderBy('title')->get();
+        return view('shop', ['comics' => $comics]);
     }
 
 
