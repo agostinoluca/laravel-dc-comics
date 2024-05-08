@@ -5,7 +5,7 @@
 
 @section('content')
     @include('partials.admin_nav')
-    <div class="table-responsive container mt-3">
+    <div class="table-responsive container-fluid px-5 mt-3">
         <table class="table table-primary">
             <thead>
                 <tr class="text-nowrap">
