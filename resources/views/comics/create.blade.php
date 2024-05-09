@@ -6,17 +6,7 @@
     @include('partials.admin_nav')
     <div class="container mt-3">
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
-
+        @include('partials.validation_errors')
 
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
