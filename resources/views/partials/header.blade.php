@@ -15,9 +15,8 @@
             </li>
         </ul>
     </nav>
-    <div class="position-absolute top-0 end-0 p-2">
-        <a class="nav-link text-dark {{ Route::currentRouteName() === 'admin' ? 'bg-light text-dark fw-bold' : '' }}"
-            href="{{ route('comics.index') }}">Admin section</a>
+    <div class="bg-dark bg-opacity-75 position-absolute top-0 end-0 p-2">
+        <a class="nav-link text-secondary" href="{{ route('comics.index') }}">Admin section</a>
     </div>
 
 </header>
