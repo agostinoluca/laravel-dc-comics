@@ -5,15 +5,31 @@
 @section('content')
     @include('partials.admin_nav')
     <div class="container mt-3">
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+
+
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" name="title" id="title" aria-describedby="titleHelper"
-                    placeholder="...my new comic title is..." />
+                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
+                    aria-describedby="titleHelper" placeholder="...my new comic title is..." />
                 <small id="titleHelper" class="form-text text-muted">type here the new title</small>
             </div>
+            @error('title')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             {{-- /input title --}}
 
             <div class="mb-3">
@@ -36,7 +52,7 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <textarea class="form-control" name="description" id="description" rows="3"
-                    placeholder="...write here a description..."></textarea>
+                    placeholder="...write here a description...">{{ old('description') }}</textarea>
             </div>
             {{-- /text-area description --}}
 

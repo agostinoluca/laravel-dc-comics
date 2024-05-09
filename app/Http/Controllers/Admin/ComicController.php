@@ -32,10 +32,13 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+        $val_data = $request->validate([
+            'title' => 'required|min:3'
 
-        // creo la nuova risorsa con i dati forniti dal form inserito in create
-        $comic = Comic::create($data);
+        ]);
+
+        // creo la nuova risorsa con i dati validati forniti dal form inserito in create
+        $comic = Comic::create($val_data);
 
         // reindirizzo alla rotta
         return to_route('comics.show', $comic);
