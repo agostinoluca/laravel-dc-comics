@@ -38,14 +38,20 @@
                     placeholder="...https://..." />
                 <small id="thumbHelper" class="form-text text-muted">paste here the thumb of cover image</small>
             </div>
+            @error('thumb')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             {{-- /input thumb --}}
 
 
             <div class="mb-3">
-                <label for="description" class="form-label @error('description') is-invalid @enderror">Description</label>
-                <textarea class="form-control" name="description" id="description" rows="3"
-                    placeholder="...write here a description...">{{ old('description') }}</textarea>
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
+                    rows="3" placeholder="...write here a description...">{{ old('description') }}</textarea>
             </div>
+            @error('description')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             {{-- /text-area description --}}
 
             <button type="submit" class="btn btn-primary">

@@ -33,8 +33,9 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $val_data = $request->validate([
-            'title' => 'required|min:3'
-
+            'title' => 'required|min:3',
+            'thumb' => 'required|url',
+            'description' => 'required|min:20'
         ]);
 
         // creo la nuova risorsa con i dati validati forniti dal form inserito in create
